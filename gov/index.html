@@ -142,12 +142,8 @@ var format = {
     <h3>Basic</h3>
     <p>The most basic example simply generates a table whose columns are the keys of the data array's objects.</p>
     <pre class="prettyprint">
-var data = [
-  {Company: 'Yahoo', CEO: 'Marissa Mayer', Founded: '1994', Headquarters: 'Sunnyvale, CA'},
-  {Company: 'Google', CEO: 'Larry Page', Founded: '1998', Headquarters: 'Mountain View, CA'},
-  {Company: 'Facebook', CEO: 'Mark Zuckerberg', Founded: '2004', Headquarters: 'Menlo Park, CA'},
-  {Company: 'Apple', CEO: 'Tim Cook', Founded: '1976', Headquarters: 'Cupertino, CA'}
-];
+var string = file_get_contents("gov_weight.json");
+var data = json_decode(json_decode($string, true));
 $('#basic').table(data);</pre>
     <div id="basic" class="scroll"></div>
     <h3>Sorting Headers</h3>
